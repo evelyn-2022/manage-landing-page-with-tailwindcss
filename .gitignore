@@ -1,0 +1,5 @@
+.DS_Store
+.prettierrc
+node_modules/
+
+style-guide.md
