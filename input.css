@@ -4,10 +4,11 @@
 
 /* Background Image */
 body {
-  background-image: url('../images/bg-tablet-pattern.svg');
+  background-image: url('../images/bg-tablet-pattern.svg'),
+    url('../images/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
   background-size: 800px;
-  background-position: 120% -20%;
+  background-position: 120% -20%, -60% 73%;
 }
 
 #cta {
@@ -19,7 +20,7 @@ body {
 @media (max-width: 576px) {
   body {
     background-size: 580px;
-    background-position: 50px -170px;
+    background-position: 50px -240px, 265px 350px;
   }
 
   #cta {
@@ -46,7 +47,7 @@ body {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: all 0.25s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .hamburger span:nth-child(1) {
@@ -77,16 +78,24 @@ body {
 }
 
 .menu-container > #menu {
-  /* height: 0; */
-  /* max-height: 0; */
   opacity: 0;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .menu-container.open > #menu {
-  /* height: auto; */
-  /* max-height: 280px; */
   opacity: 1;
+  transition: all 0.4s ease-in;
+}
 
-  transition: all 0.25s ease-in;
+.overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+  backdrop-filter: blur(1px);
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
